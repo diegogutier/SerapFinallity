@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+
+Route::get('prueba',function(){
+
+   return'Bienvenido a mi super pagina' ;
+});

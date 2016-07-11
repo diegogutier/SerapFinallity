@@ -23,4 +23,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function Califica_Pelicula_User ()
+    {
+        return $this->hasMany('app/Califica_Pelicula_User','user_id');
+    }
+
+    public  function Arrienda_User_Pelicula()
+    {
+        return $this->hasMany('app/Arrienda_User_Pelicula','user_id');
+    }
 }
