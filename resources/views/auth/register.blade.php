@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
-
+                        <div id='visto'>
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Nombre</label>
 
@@ -84,15 +84,16 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit"  class="btn btn-primary" style="background-color: #d62728">
+                                <button type="button"  class="btn btn-primary" onclick="mostrar()" style="background-color: #d62728">
                                     <i class="fa fa-btn fa-user"></i> Siguiente
                                 </button>
-                                <button type="submit"  class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i> Cancelar</button>
+                                <button type="button"  class="btn btn-primary">
+                                    <i class="fa fa-btn fa-user" onclick="window.location.href='login.blade.php'"></i> Cancelar</button>
                             </div>
                         </div>
+                            </div>
                         <!--REGISTRO 2-->
-                        <div class="ocultar">Seleccionar 3 Generos Preferidos
+                        <div id='oculto' style='display:none;'>Seleccionar 3 Generos Preferidos
                             <div class="form-group{{ $errors->has('genero1') ? ' has-error' : '' }}">
                                 <label for="name" class="col-md-4 control-label">Genero 1</label>
 
@@ -196,7 +197,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-4">
-                                            <button type="submit"  class="btn btn-primary" style="background-color: #d62728">
+                                            <button type="button"  class="btn btn-primary" onclick="mostrar2()"  class="btn btn-primary" style="background-color: #d62728">
                                                 <i class="fa fa-btn fa-user"></i> Siguiente
                                             </button>
                                             <button type="submit"  class="btn btn-primary">
@@ -207,7 +208,7 @@
                           <!--FIN DIV PASO 2-->
                         </div>
                             <!--DIV PASO 3-->
-                            <div class="ocultar">Seleccionar 2 Idiomas
+                            <div id='oculto2' style='display:none;'>Seleccionar 2 Idiomas
                                 <div class="form-group{{ $errors->has('idioma1') ? ' has-error' : '' }}">
                                     <label for="name" class="col-md-4 control-label">Idioma 1</label>
 

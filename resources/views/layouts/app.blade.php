@@ -24,6 +24,14 @@
             margin-right: 6px;
         }
     </style>
+    <script type="text/javascript">
+        function mostrar(){
+            document.getElementById('oculto').style.display = 'block';
+            document.getElementById('visto').style.display = 'none';}
+        function mostrar2(){
+            document.getElementById('oculto2').style.display = 'block';
+            document.getElementById('oculto').style.display = 'none';}
+    </script>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
