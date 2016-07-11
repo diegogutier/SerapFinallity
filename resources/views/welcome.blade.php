@@ -2,13 +2,16 @@
 
 @section('content')
 <div class="container">
+
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="" /></a>
             <div class="panel panel-default">
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Chupen me lo todo
+                    Your Application's Landing Page.
                 </div>
             </div>
         </div>
