@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.app')1
 
 @section('content')
 <div class="container" style="background: url(http://fotos.subefotos.com/f34418761529dad80c8bdb4d5921a9aco.png)">
     <div class="row" >
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Registrar paso 1 de 4</div>
+                <div class="panel-heading">Registrar</div>
                 <div align="center"  >
                     <div ><img src="logo.png"  style="padding-left: 50px"   alt="" /></div>
                 <div class="panel-body">
@@ -88,7 +88,9 @@
                                     <i class="fa fa-btn fa-user"></i> Siguiente
                                 </button>
                                 <button type="button"  class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user" onclick="window.location.href='login.blade.php'"></i> Cancelar</button>
+                                    <i class="fa fa-btn fa-user" onclick="'"></i> Cancelar
+                                    onclick="window.location.href='login.blade.php'
+                                </button>
                             </div>
                         </div>
                             </div>
