@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,18 +23,19 @@
     <title>Recomendaciones</title>
 
 </head>
-<body>
+<div class="container" style="background: url(http://fotos.subefotos.com/f34418761529dad80c8bdb4d5921a9aco.png)">
 <!-- jQuery (necesario para los plugins JavaScript de Bootstrap) -->
 {!! Html::script('js/jquery-1.12.4.min.js') !!}
         <!-- Plugins JavaScript de Bootstrap-->
 {!! Html::script('js/bootstrap.min.js') !!}
         <!--Otros Scripts-->
 
-<div class="panel panel-default">
+<div class="panel panel-default" >
     <div class="panel-heading">
         <h5 class="panel-title">Pelicula :  </h5>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" >
+        <div><img src="http://img10.indafoto.hu/5/7/24927_de9cf7fc237bf2217c1c576e4f026fee/1712789_ced908b83aa277849278d04c12180983_s.jpg" alt="" /></div>
         <h4>Nombre:</h4><h5>{!! $pelicula->nombre!!}</h5>
         <h4>Año</h4><h5> {!!$pelicula->ano_lanzamiento !!}</h5>
         <h4>Descripción</h4><h5> {!!$pelicula->descripcion !!}</h5>
@@ -49,5 +52,7 @@
     <a class="btn btn-primary btn-mini" href="{!! URL::to('pelicula')!!}">Listado</a>
     </div>
 
-</body>
+</div>
 </html>
+
+@endsection
