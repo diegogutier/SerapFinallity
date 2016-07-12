@@ -19,12 +19,5 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-
-Route::get('prueba',function(){
-
-   return'Bienvenido a mi super pagina' ;
-});
-
-
 Route::resource('pelicula','PeliculasController');
 

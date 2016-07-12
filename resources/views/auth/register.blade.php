@@ -1,4 +1,4 @@
-@extends('layouts.app')1
+@extends('layouts.app')
 
 @section('content')
 <div class="container" style="background: url(http://fotos.subefotos.com/f34418761529dad80c8bdb4d5921a9aco.png)">
@@ -88,8 +88,8 @@
                                     <i class="fa fa-btn fa-user"></i> Siguiente
                                 </button>
                                 <button type="button"  class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user" onclick="'"></i> Cancelar
-                                    onclick="window.location.href='login.blade.php'
+                                    <i class="fa fa-btn fa-user" onclick=""></i> Cancelar
+
                                 </button>
                             </div>
                         </div>
@@ -218,7 +218,7 @@
                                     <div class="col-md-6">
                                         <select name="idioma1">
                                             @foreach(App\Pelicula::all() as $pelicula)
-                                                <option value="{{$peliculas->id}}">{{$peliculas->idioma}}</option>
+                                                <option value="{{$pelicula->id}}">{{$pelicula->idioma}}</option>
                                             @endforeach
                                         </select>
                                         @if ($errors->has('idioma1'))
@@ -235,7 +235,7 @@
                                     <div class="col-md-6">
                                         <select name="idioma2">
                                             @foreach(App\Pelicula::all() as $pelicula)
-                                                <option value="{{$peliculas->id}}">{{$peliculas->idioma}}</option>
+                                                <option value="{{$pelicula->id}}">{{$pelicula->idioma}}</option>
                                             @endforeach
                                         </select>
                                         @if ($errors->has('idioma2'))
