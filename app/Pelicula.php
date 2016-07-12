@@ -4,30 +4,36 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Pelicula extends Model
 {
-    public function Director()
+    protected $table = 'peliculas';
+        protected $fillable = array(
+          'nombre','ano_lanzamito','descripcion','idioma','Promedio_cal','precio'
+        );
+
+    public function director()
     {
-        return $this->belongsTo('app/Director','director_id');
+        return $this->belongsTo('App\Director');
     }
 
-    public function Actua_Actor_Pelicula()
+    public function actua_Actor_Pelicula()
     {
-        return $this->hasMany('app/Actua_Actor_Pelicula','pelicula_id');
+        return $this->hasMany('App\Actua_Actor_Pelicula','pelicula_id');
     }
 
-    public function Posee_Pelicula_Genero()
+    public function posee_Pelicula_Genero()
     {
-        return $this->hasMany('app/Posee_Pelicula_Genero','pelicula_id');
+        return $this->hasMany('App\Posee_Pelicula_Genero','pelicula_id');
     }
 
-    public function Califica_Pelicula_User()
+    public function califica_Pelicula_User()
     {
-        return $this->hasMany('app/Califica_Pelicula_User','pelicula_id');
+        return $this->hasMany('App\Califica_Pelicula_User','pelicula_id');
     }
 
-    public function Arrienda_User_Pelicula ()
+    public function arrienda_User_Pelicula ()
     {
-        return $this->hasMany('app/Arrienda_User_Pelicula','pelicula_id');
+        return $this->hasMany('App\Arrienda_User_Pelicula','pelicula_id');
     }
 }

@@ -14,10 +14,10 @@ class CreateArriendaUserPeliculasTable extends Migration
     {
         Schema::create('arrienda__user__peliculas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();;
-            $table->integer('pelicula_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('pelicula_id')->references('id')->on('peliculas');
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->integer('pelicula_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('pelicula_id')->references('id')->on('peliculas')->onDelete('set null');
             $table->date('fecha_termino');
             $table->timestamps();
         });

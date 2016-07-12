@@ -14,10 +14,10 @@ class CreateActuaActorPeliculasTable extends Migration
     {
         Schema::create('actua__actor__peliculas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('actor_id')->unsigned();
-            $table->integer('pelicula_id')->unsigned();
-            $table->foreign('actor_id')->references('id')->on('actors');
-            $table->foreign('pelicula_id')->references('id')->on('peliculas');
+            $table->integer('actor_id')->unsigned()->nullable();
+            $table->integer('pelicula_id')->unsigned()->nullable();
+            $table->foreign('actor_id')->references('id')->on('actors')->onDelete('set null');
+            $table->foreign('pelicula_id')->references('id')->on('peliculas')->onDelete('set null');
             $table->timestamps();
         });
     }

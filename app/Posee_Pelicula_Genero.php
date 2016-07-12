@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Posee_Pelicula_Genero extends Model
 {
-    public function Pelicula ()
+    protected $table = 'posee_pelicula_generos';
+
+    public function pelicula ()
     {
-        return $this->belongsTo('app/Pelicula','pelicula_id');
+        return $this->belongsTo('App\pelicula','pelicula_id');
     }
 
-    public function Genero()
+    public function genero()
     {
-        return $this->belongsTo('app/Genero','genero_id');
+        return $this->belongsTo('App\Genero','genero_id');
     }
 }

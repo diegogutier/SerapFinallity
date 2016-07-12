@@ -14,10 +14,10 @@ class CreatePoseePeliculaGenerosTable extends Migration
     {
         Schema::create('posee__pelicula__generos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('genero_id')->unsigned();
-            $table->integer('pelicula_id')->unsigned();
-            $table->foreign('genero_id')->references('id')->on('generos');
-            $table->foreign('pelicula_id')->references('id')->on('peliculas');
+            $table->integer('genero_id')->unsigned()->nullable();
+            $table->integer('pelicula_id')->unsigned()->nullable();
+            $table->foreign('genero_id')->references('id')->on('generos')->onDelete('set null');
+            $table->foreign('pelicula_id')->references('id')->on('peliculas')->onDelete('set null');
             $table->timestamps();
         });
     }

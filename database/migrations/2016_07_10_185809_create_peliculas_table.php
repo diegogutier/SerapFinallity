@@ -20,8 +20,8 @@ class CreatePeliculasTable extends Migration
             $table->string('idioma');
             $table->integer('Promedio_cal');
             $table->integer('precio');
-            $table->integer('director_id')->unsigned();
-            $table->foreign('director_id')->references('id')->on('directors');
+            $table->integer('director_id')->unsigned()->nullable();
+            $table->foreign('director_id')->references('id')->on('directors')->onDelete('set null');
             $table->timestamps();
         });
     }

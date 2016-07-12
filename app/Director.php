@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Director extends Model
 {
-    public function Pelicula()
+    protected $table = 'directors';
+        protected $fillable = array(
+          'nombre', 'apellido'
+        );
+
+    public function pelicula()
     {
-        return $this->hasMany('app/Pelicula','director_id');
+        return $this->hasMany('App\Pelicula','director_id');
     }
 }
