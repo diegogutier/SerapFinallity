@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Genero extends Model
 {
-    public function Posee_Pelicula_Genero ()
+    protected $table = 'generos';
+    protected $fillable = array(
+        'nombre'
+    );
+
+    public function posee_Pelicula_Genero ()
     {
-        return $this->hasMany('app/Posee_Pelicula_Genero','genero_id');
+        return $this->hasMany('App\Posee_Pelicula_Genero','genero_id');
     }
 }

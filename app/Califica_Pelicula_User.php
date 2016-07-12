@@ -6,13 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Califica_Pelicula_User extends Model
 {
-    public function Pelicula ()
+    protected $table = 'califica_pelicula_users';
+    protected $fillable = array(
+        'calificacion'
+    );
+
+    public function pelicula ()
     {
-        return $this->belongsTo('app/Pelicula','Pelciula_id');
+        return $this->belongsTo('App\pelicula','Pelciula_id');
     }
 
-    public function User()
+    public function user()
     {
-        return $this->belongsTo('app/User','user_id');
+        return $this->belongsTo('App\User','user_id');
     }
 }

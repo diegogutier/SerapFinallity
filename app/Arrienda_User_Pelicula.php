@@ -6,13 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Arrienda_User_Pelicula extends Model
 {
-    public function Pelicula()
+    protected $table = 'arrienda_actor_peliculas';
+    protected $fillable = array(
+        'fecha_termino'
+    );
+
+    public function pelicula()
     {
-        return $this->belongsTo('app/Pelicula','pelicula_id');
+        return $this->belongsTo('App\pelicula','pelicula_id');
     }
 
-    public function User ()
+    public function user ()
     {
-        return $this->belongsTo('app/User','user_id');
+        return $this->belongsTo('App\User','user_id');
     }
 }

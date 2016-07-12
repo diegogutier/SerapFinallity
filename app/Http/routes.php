@@ -24,3 +24,7 @@ Route::get('prueba',function(){
 
    return'Bienvenido a mi super pagina' ;
 });
+
+
+Route::resource('pelicula','PeliculasController');
+
