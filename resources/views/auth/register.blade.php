@@ -145,7 +145,7 @@
                                 </div>
                             </div>
 
-                            <div class="ocultar">Seleccionar 3 Generos NO Preferidos
+                            <div>Seleccionar 3 Generos NO Preferidos
                                 <div class="form-group{{ $errors->has('no_genero1') ? ' has-error' : '' }}">
                                     <label for="name" class="col-md-4 control-label">Genero 1</label>
 
@@ -195,20 +195,21 @@
                                     </span>
                                         @endif
                                     </div>
+                                </div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-4">
-                                            <button type="button"  class="btn btn-primary" onclick="mostrar2()"  class="btn btn-primary" style="background-color: #d62728">
+                                            <button type="button"  class="btn btn-primary" onclick="mostrardos()" style="background-color: #d62728">
                                                 <i class="fa fa-btn fa-user"></i> Siguiente
                                             </button>
-                                            <button type="submit"  class="btn btn-primary">
-                                                <i class="fa fa-btn fa-user"></i> Cancelar</button>
+                                            <button type="button"  class="btn btn-primary">
+                                                <i class="fa fa-btn fa-user" onclick="window.location.href='login.blade.php'"></i> Cancelar</button>
                                         </div>
                                     </div>
                                 </div>
                           <!--FIN DIV PASO 2-->
                         </div>
-                            <!--DIV PASO 3-->
-                            <div id='oculto2' style='display:none;'>Seleccionar 2 Idiomas
+                        <!--DIV PASO 3-->
+                        <div id='ocultodos' style='display:none;'>Seleccionar 2 Idiomas
                                 <div class="form-group{{ $errors->has('idioma1') ? ' has-error' : '' }}">
                                     <label for="name" class="col-md-4 control-label">Idioma 1</label>
 
@@ -252,8 +253,6 @@
                                     </div>
                                 </div>
                                 </div>
-
-                            </div>
                     </form>
                 </div>
             </div>
