@@ -7,8 +7,6 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "freshwork/chilean-bundle": "^2.0",
-        "laravelCollective/html":"5.2.*",
         "laravelcollective/html": "^5.2"
     },
     "require-dev": {

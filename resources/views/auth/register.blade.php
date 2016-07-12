@@ -89,7 +89,6 @@
                                 </button>
                                 <button type="button"  class="btn btn-primary">
                                     <i class="fa fa-btn fa-user" onclick=""></i> Cancelar
-
                                 </button>
                             </div>
                         </div>
@@ -204,7 +203,7 @@
                                                 <i class="fa fa-btn fa-user"></i> Siguiente
                                             </button>
                                             <button type="button"  class="btn btn-primary">
-                                                <i class="fa fa-btn fa-user" onclick="window.location.href='login.blade.php'"></i> Cancelar</button>
+                                                <i class="fa fa-btn fa-user" onclick=""></i> Cancelar</button>
                                         </div>
                                     </div>
                                 </div>
