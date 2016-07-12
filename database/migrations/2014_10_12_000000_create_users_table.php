@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('no_genero3');
             $table->string('idioma1');
             $table->string('idioma2');
+            $table->string('rol')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });

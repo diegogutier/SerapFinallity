@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 class UserTableSeeder extends Seeder
 {
     /**
@@ -15,7 +16,7 @@ class UserTableSeeder extends Seeder
            'name'=>'Nicolas',
            'apellido'=>'Oyarce',
            'email'=>'pension@hotmail.cl',
-           'password'=>'321344',
+           'password'=>Hash::make('321344'),
            'edad'=>23,
            'genero1'=>'Comedia',
            'genero2'=>'aventura',
@@ -25,13 +26,14 @@ class UserTableSeeder extends Seeder
            'no_genero3'=>'Porno',
            'idioma1'=>'Aleman',
            'idioma2'=>'Español',
+           'rol'=>'admin',
        ]);
 
         User::create([
             'name'=>'Hans',
             'apellido'=>'Bucker',
             'email'=>'hans@gmail.com',
-            'password'=>'123456667',
+            'password'=>Hash::make('123456667'),
             'edad'=>23,
            'genero1'=>'Terror',
            'genero2'=>'Comedia',
@@ -41,13 +43,14 @@ class UserTableSeeder extends Seeder
            'no_genero3'=>'Nose',
            'idioma1'=>'Español',
            'idioma2'=>'English',
+
        ]);
 
         User::create([
             'name'=>'Juan',
             'apellido'=>'Mantegazza',
             'email'=>'italianboy@gmail.com',
-            'password'=>'988334',
+            'password'=>Hash::make('988334'),
             'edad'=>25,
             'genero1'=>'Terror',
             'genero2'=>'Comedia',
@@ -57,13 +60,14 @@ class UserTableSeeder extends Seeder
             'no_genero3'=>'Porno',
             'idioma1'=>'Español',
             'idioma2'=>'English',
+
         ]);
 
         User::create([
             'name'=>'Mauricio',
             'apellido'=>'Leal',
             'email'=>'Mauleal@gmail.com',
-            'password'=>'1234',
+            'password'=> Hash::make('1234'),
             'edad'=>23,
             'genero1'=>'Terror',
             'genero2'=>'Gore',
@@ -73,6 +77,7 @@ class UserTableSeeder extends Seeder
             'no_genero3'=>'Aventura',
             'idioma1'=>'Español',
             'idioma2'=>'English',
+
         ]);
     }
 }
