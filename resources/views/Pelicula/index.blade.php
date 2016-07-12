@@ -63,10 +63,12 @@
         <td>{!! $pelicula->director->nombre !!}</td>
 
         <td> <a class="btn btn-xs btn-primary" href="{!! URL::to('pelicula/'.$pelicula->id) !!}">Ver</a>
+            @if(Auth::user()->rol == 'admin')
              <a class="btn btn-xs btn-success" href="{!! URL::to('pelicula/'.$pelicula->id.'/edit') !!}">Editar</a>
             {!! Form::open(['action' => ['PeliculasController@destroy', $pelicula->id], 'method' => 'delete']) !!}
             {!! Form::submit('Eliminar', ['class'=>'btn btn-xs btn-danger','onclick'=>'return confirm("Seguro que desea eliminar?");']) !!}
             {!! Form::close() !!}
+            @endif
         </td>
 
 
