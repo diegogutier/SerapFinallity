@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,22 +20,23 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>Recomendaciones</title>
+    <title>Recomendaciones Anales del Simio</title>
 
 </head>
-<body>
+<div class="container" style="background: url(http://fotos.subefotos.com/f34418761529dad80c8bdb4d5921a9aco.png)">
 <!-- jQuery (necesario para los plugins JavaScript de Bootstrap) -->
 {!! Html::script('js/jquery-1.12.4.min.js') !!}
         <!-- Plugins JavaScript de Bootstrap-->
 {!! Html::script('js/bootstrap.min.js') !!}
         <!--Otros Scripts-->
+    <div class="panel panel-default" >
 <h3>Lista de peliculas:</h3><br>
 <div class="table-responsive">
     <table class="table table-bordered">
         <thead>
         <th>Nombre</th>
         <th>Año</th>
-        <th>Descripcion</th>
+        <!--<th>Descripcion</th>-->
         <th>Idioma</th>
         <th>Calificacion</th>
         <th>Precio</th>
@@ -49,7 +52,7 @@
 
         <td>{!! $pelicula->ano_lanzamiento !!}</td>
 
-        <td>{!! $pelicula->descripcion !!} </td>
+
 
         <td>{!! $pelicula->idioma !!}</td>
 
@@ -79,5 +82,8 @@
         </div>
     </div>
 
-</body>
+</div>
+    </div>
+    </div>
 </html>
+@endsection
