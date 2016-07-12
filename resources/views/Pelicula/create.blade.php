@@ -21,13 +21,13 @@
     <title>Recomendaciones</title>
 
 </head>
-<body>
+<div class="container" style="background: url(http://fotos.subefotos.com/f34418761529dad80c8bdb4d5921a9aco.png)">
 <!-- jQuery (necesario para los plugins JavaScript de Bootstrap) -->
 {!! Html::script('js/jquery-1.12.4.min.js') !!}
         <!-- Plugins JavaScript de Bootstrap-->
 {!! Html::script('js/bootstrap.min.js') !!}
         <!--Otros Scripts-->
-
+    <div class="panel panel-default" >
 @if ($errors->has())
     <div class="alert alert-danger">
         @foreach ($errors->all() as $error)
@@ -107,5 +107,6 @@
     </div>
 </div>
 {!! Form::close() !!}
-</body>
+</div>
+    </div>
 </html>
